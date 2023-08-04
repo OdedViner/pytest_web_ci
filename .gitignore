@@ -1,0 +1,10 @@
+*~
+.*.sw[nmop]
+*.pyc
+.vscode
+__pycache__
+ven*
+dist
+build
+.pytest_cache
+.idea
