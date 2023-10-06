@@ -8,7 +8,13 @@ __all__ = [
 def pytest_addoption(parser):
     parser.addoption(
         f"--webci-conf",
-        dest=f"webci_conf",
+        dest="webci_conf",
         action="append",
         help="Path to config file",
     )
+    parser.addoption(
+        f"--web-version",
+        dest="web_version",
+        help="web version",
+    )
+    A = 1

@@ -2,6 +2,7 @@
 ENV:
   ip_address: '127.0.0.1'
   port: '8080'
+  web_version: '1'
 
 # This section is related to ui testing with selenium
 RUN:

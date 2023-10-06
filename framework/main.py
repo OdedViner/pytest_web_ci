@@ -21,7 +21,10 @@ def get_defaults():
 def process_conf_files(arguments):
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--webci-conf", action="append", default=[])
+    parser.add_argument("--web-version")
     args, unknown = parser.parse_known_args(args=arguments)
+    if args.web_version is not None:
+        framework.config.ENV["web_version"] = args.web_version
     return args.webci_conf
 
 

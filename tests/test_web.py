@@ -9,8 +9,10 @@ log = logging.getLogger(__name__)
 
 @pytest.mark.tier4
 def test_web1(project_factory):
-    port=config.ENV["port"]
+    port = config.ENV["port"]
+    version = config.ENV["web_version"]
     log.info(f"port123={port}")
+    log.info(f"web_version={version}")
     project_factory()
     log.info("tier1")
 
