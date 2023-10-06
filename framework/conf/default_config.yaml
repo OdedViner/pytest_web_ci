@@ -1,8 +1,12 @@
 ---
-RUN:
-  param1: '1'
-  param2: '2'
-
 ENV:
-  param3: '3'
-  param4: '4'
+  ip_address: '127.0.0.1'
+  port: '8080'
+
+# This section is related to ui testing with selenium
+RUN:
+  browser_type: "chrome"
+  chrome_type: "google-chrome"
+  headless: True
+  screenshot: True
+  ignore_ssl: True

@@ -7,7 +7,7 @@ import argparse
 import framework
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_CONFIG_PATH = os.path.join(THIS_DIR, "conf/default_config.yaml")
+DEFAULT_CONFIG_PATH = os.path.join(THIS_DIR, "default_config.yaml")
 
 
 def get_defaults():
@@ -26,8 +26,7 @@ def process_conf_files(arguments):
 
 
 def load_config(config_files):
-    """
-    """
+    """ """
     for config_file in config_files:
         with open(os.path.abspath(os.path.expanduser(config_file))) as file_stream:
             custom_config_data = yaml.safe_load(file_stream)
@@ -51,8 +50,7 @@ def main(argv=None):
             "framework.pytest_lib",
         ]
     )
-    pytest.main(["/home/oviner/python-testing", "-m", "tier1"])
-
+    pytest.main(arguments)
 
 
 main()
