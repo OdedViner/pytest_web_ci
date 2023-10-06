@@ -1,16 +1,14 @@
 import pytest
 
+__all__ = [
+    "pytest_addoption",
+]
+
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--deploy",
-        dest="deploy",
-        action="store_true",
-        default=False,
-        help="If provided a test cluster will be deployed on AWS to use for testing",
+        f"--webci-conf",
+        dest=f"webci_conf",
+        action="append",
+        help="Path to config file",
     )
-
-
-@pytest.mark.my_marker
-def pytest_my_marker():
-    print("This is a custom marker.")
