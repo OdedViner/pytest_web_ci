@@ -44,13 +44,17 @@ def main(argv=None):
     arguments = argv or sys.argv[1:]
     conf_file_path = process_conf_files(arguments)
     load_config(conf_file_path)
-    arguments.extend(
-        [
-            "-p",
-            "framework.pytest_lib",
-        ]
-    )
-    pytest.main(arguments)
-
-
-main()
+    # arguments.extend(
+    #     [
+    #         "-p",
+    #         "framework.pytest_lib",
+    #     ]
+    # )
+    # pytest_arguments = [
+    #     "tests",  # Replace with your test file or directory
+    #     "-v",  # Verbose output
+    #     "--color=yes",  # Enable colored output
+    #     "--junitxml=pytest_report.xml",  # Generate JUnit XML report
+    # ]
+    # arguments = ['tests/', '-m', 'tier4']
+    return pytest.main(arguments)

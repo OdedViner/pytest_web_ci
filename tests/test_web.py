@@ -7,10 +7,9 @@ log = logging.getLogger(__name__)
 from framework.pytest_customization import tier1, tier2, tier3
 
 
-@tier1
+@pytest.mark.tier4
 def test_web1(project_factory):
-    # project_factory()
-    # helper.run_command("pwd")
+    project_factory()
     log.info("tier1")
 
 
